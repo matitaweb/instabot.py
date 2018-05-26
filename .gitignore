@@ -97,3 +97,8 @@ ENV/
 # IDEs
 .idea/
 *.iml
+
+# bot file produced
+config.properties
+follows_db.db
+already_liked.txt
