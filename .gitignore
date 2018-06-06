@@ -102,3 +102,4 @@ ENV/
 config.properties
 follows_db.db
 already_liked.txt
+main.py
