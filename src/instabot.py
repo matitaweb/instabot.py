@@ -161,6 +161,7 @@ class InstaBot:
         self.follows_db_c = self.follows_db.cursor()
         check_and_update(self)
         fake_ua = UserAgent()
+        #fake_ua = UserAgent(verify_ssl=False, use_cache_server=False)
         self.user_agent = check_and_insert_user_agent(self, str(fake_ua.random))
         self.bot_start = datetime.datetime.now()
         self.start_at_h = start_at_h
@@ -953,7 +954,7 @@ class InstaBot:
         if self.log_mod == 0:
             try:
                 now_time = datetime.datetime.now()
-                print(now_time.strftime("%d.%m.%Y_%H:%M")  + " " + log_text)
+                print(now_time.strftime("%d.%m.%Y_%H:%M") + " " + str(log_text))
             except UnicodeEncodeError:
                 print("Your text has unicode problem!")
         elif self.log_mod == 1:
